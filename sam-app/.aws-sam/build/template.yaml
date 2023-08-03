@@ -5,10 +5,10 @@ Description: 'Sample SAM Template for sam-app
   '
 Globals:
   Function:
-    Timeout: 10
-    MemorySize: 128
+    Timeout: 50
+    MemorySize: 3008
 Resources:
-  HelloWorldFunction:
+  Merger:
     Type: AWS::Serverless::Function
     Properties:
       PackageType: Image
@@ -18,14 +18,14 @@ Resources:
           Properties:
             Path: /hello
             Method: get
-      ImageUri: helloworldfunction:dotnet6-v1
+      ImageUri: merger:dotnet6-v1
     Metadata:
       DockerBuildArgs:
         SAM_BUILD_MODE: run
       DockerContext: /home/wojciechszczygielski/Documents/britenet/aws-serverless/merger-dot-net/sam-app/src/HelloWorld
       DockerTag: dotnet6-v1
       Dockerfile: Dockerfile
-      SamResourceId: HelloWorldFunction
+      SamResourceId: Merger
 Outputs:
   HelloWorldApi:
     Description: API Gateway endpoint URL for Prod stage for Hello World function
