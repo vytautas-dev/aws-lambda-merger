@@ -10,6 +10,9 @@
     <PackageReference Include="Amazon.Lambda.Serialization.SystemTextJson" Version="2.2.0" />
     <PackageReference Include="Amazon.Lambda.APIGatewayEvents" Version="2.4.0" />
     <PackageReference Include="AWSSDK.S3" Version="3.7.8.20" />
+    <!-- <PackageReference Include="AWSSDK.S3" Version="3.3.110.19" /> -->
     <PackageReference Include="itext7" Version="7.1.16" />
+    <PackageReference Include="Minio" Version="5.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 </Project>
